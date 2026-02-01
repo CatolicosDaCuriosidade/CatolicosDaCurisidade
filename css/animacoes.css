@@ -1,1 +1,186 @@
+/* ==========================================
+   ANIMACOES.CSS - EFEITOS ULTRA PREMIUM
+========================================== */
 
+/* ===============================
+   ANIMAÇÃO FADE UP
+=================================*/
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   ANIMAÇÃO FADE LEFT
+=================================*/
+.fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s ease;
+}
+
+.fade-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===============================
+   ANIMAÇÃO FADE RIGHT
+=================================*/
+.fade-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s ease;
+}
+
+.fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===============================
+   ZOOM SUAVE
+=================================*/
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+}
+
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===============================
+   BRILHO DOURADO EM TEXTO
+=================================*/
+.texto-dourado {
+  color: var(--dourado);
+  text-shadow: 0 0 10px rgba(212,175,55,0.6);
+  animation: brilhoDourado 2s infinite alternate;
+}
+
+@keyframes brilhoDourado {
+  from {
+    text-shadow: 0 0 5px rgba(212,175,55,0.4);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(245,215,110,1);
+  }
+}
+
+/* ===============================
+   EFEITO HOVER GLOW CARD
+=================================*/
+.card-glow {
+  transition: 0.4s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 25px rgba(212,175,55,0.8);
+  transform: translateY(-10px);
+}
+
+/* ===============================
+   ANIMAÇÃO HERO ENTRADA
+=================================*/
+.hero h1 {
+  animation: heroTitle 1.2s ease forwards;
+  opacity: 0;
+}
+
+.hero p {
+  animation: heroSubtitle 1.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes heroTitle {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroSubtitle {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   ANIMAÇÃO BOTÃO PULSANTE
+=================================*/
+.btn-pulse {
+  animation: pulseBtn 2s infinite;
+}
+
+@keyframes pulseBtn {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212,175,55,0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(212,175,55,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212,175,55,0);
+  }
+}
+
+/* ===============================
+   ANIMAÇÃO SCROLL SUAVE PARA SEÇÕES
+=================================*/
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   ANIMAÇÃO FLUTUAR ÍCONES
+=================================*/
+.flutuar {
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ===============================
+   TRANSIÇÃO DE PÁGINA SUAVE
+=================================*/
+body {
+  animation: fadePage 0.6s ease-in-out;
+}
+
+@keyframes fadePage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
