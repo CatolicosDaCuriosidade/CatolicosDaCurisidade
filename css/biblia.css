@@ -1,1 +1,163 @@
+/* ==========================================
+   BIBLIA.CSS - ESTILO PERGAMINHO PREMIUM
+========================================== */
 
+/* FUNDO ESPECÍFICO DA PÁGINA BÍBLIA */
+.body-biblia {
+  background: var(--fundo-pergaminho);
+  color: var(--marrom-biblia);
+}
+
+/* CONTAINER PRINCIPAL DA BÍBLIA */
+.biblia-container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 120px auto 60px auto;
+  padding: 40px;
+  background: #fdf6e3;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+/* TEXTURA DE PERGAMINHO SUAVE */
+.biblia-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0,0,0,0.03), transparent 60%);
+  pointer-events: none;
+}
+
+/* TÍTULO DO LIVRO */
+.biblia-titulo {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--marrom-biblia);
+  padding-bottom: 10px;
+}
+
+/* CAPÍTULO */
+.biblia-capitulo {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* VERSÍCULOS */
+.versiculo {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.versiculo strong {
+  color: var(--vermelho-igreja);
+}
+
+/* HOVER VERSÍCULO */
+.versiculo:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* BUSCA */
+.busca-biblia {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.busca-biblia input,
+.busca-biblia select {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.busca-biblia button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: var(--vermelho-igreja);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.busca-biblia button:hover {
+  background: var(--dourado);
+  color: black;
+}
+
+/* LISTA DE LIVROS */
+.lista-livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.lista-livros button {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: var(--marrom-biblia);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.lista-livros button:hover {
+  background: var(--vermelho-igreja);
+}
+
+/* SCROLL INTERNO BÍBLIA */
+.biblia-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* DARK MODE BÍBLIA */
+body.dark .biblia-container {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark .versiculo:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+body.dark .lista-livros button {
+  background: #333;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .biblia-container {
+    padding: 20px;
+  }
+
+  .biblia-titulo {
+    font-size: 1.5rem;
+  }
+
+  .versiculo {
+    font-size: 0.9rem;
+  }
+
+  .busca-biblia {
+    flex-direction: column;
+    align-items: center;
+  }
+}
