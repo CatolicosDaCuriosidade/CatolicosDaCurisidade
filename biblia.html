@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bíblia Católica Online</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/biblia.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/desktop.css">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body class="biblia-page">
+
+  <!-- Partículas Douradas -->
+  <canvas id="particulasCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="topo biblia-topo">
+    <div class="logo-area">
+      <img src="assets/logo.png" class="logo">
+      <h1>Bíblia Católica</h1>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="curiosidades.html">Curiosidades</a>
+      <a href="coroinhas.html">Coroinhas</a>
+      <a href="biblia.html">Bíblia</a>
+      <a href="oracoes.html">Orações</a>
+    </nav>
+  </header>
+
+  <!-- HERO BÍBLICO -->
+  <section class="hero-biblia">
+    <h2>📖 A Palavra Viva de Deus</h2>
+    <p>
+      Explore os 73 livros da Bíblia Católica, organizados por Antigo e Novo Testamento.
+    </p>
+  </section>
+
+  <!-- SELETOR DE TESTAMENTO -->
+  <section class="seletor-testamento">
+    <button onclick="mostrarAntigo()">Antigo Testamento</button>
+    <button onclick="mostrarNovo()">Novo Testamento</button>
+  </section>
+
+  <!-- LISTA DE LIVROS -->
+  <section class="livros-container">
+    <div id="listaLivros"></div>
+  </section>
+
+  <!-- CAPÍTULOS -->
+  <section class="capitulos-container">
+    <div id="listaCapitulos"></div>
+  </section>
+
+  <!-- TEXTO BÍBLICO -->
+  <section class="texto-biblico">
+    <div id="conteudoBiblia">
+      <p>Selecione um livro e capítulo para começar a leitura.</p>
+    </div>
+  </section>
+
+  <!-- BUSCA ESPECIAL -->
+  <section class="busca-biblia">
+    <h2>🔎 Buscar Palavra na Bíblia</h2>
+    <input type="text" id="buscaBibliaInput" placeholder="Ex: amor, fé, João 3:16">
+    <button onclick="buscarNaBiblia()">Buscar</button>
+    <div id="resultadoBusca"></div>
+  </section>
+
+  <!-- FOOTER PADRÃO -->
+  <footer class="rodape">    
+    <h3>Católicos Da Curiosidade</h3>    
+    <p>    
+      Vamos despertar nosso interesse na igreja católica sabendo as curiosidades secretas que nem todo mundo deve saber, saiba mais...  
+    </p>    
+
+    <div class="contato">      
+      <p><strong>Email:</strong> Catolicos_da_curiosidade@gmail.com</p>    
+    </div>    
+
+    <hr>    
+
+    <p class="copy">© 2026 Católicos Da Curiosidade. Todos os direitos reservados.</p>    
+  </footer>  
+
+  <!-- JS -->
+  <script src="js/app.js"></script>
+  <script src="js/biblia-api.js"></script>
+  <script src="js/busca.js"></script>
+  <script src="js/particulas.js"></script>
+
+</body>
+</html>
