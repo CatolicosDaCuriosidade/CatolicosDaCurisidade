@@ -1,1 +1,116 @@
+/* ==========================================
+   MOBILE.CSS - EXPERIÊNCIA DIFERENTE MOBILE
+   (ATIVA SOMENTE EM TELAS PEQUENAS)
+========================================== */
 
+@media (max-width: 768px) {
+
+  /* ======================================
+     NAVBAR MOBILE ESTILO APP
+  ====================================== */
+
+  .navbar {
+    padding: 12px 0;
+    background: linear-gradient(180deg, var(--vermelho-igreja), #5a0000);
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 2px solid var(--dourado);
+    display: flex !important;
+  }
+
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links li a {
+    font-size: 0.8rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li a:hover {
+    color: var(--dourado);
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  /* ======================================
+     HERO MOBILE
+  ====================================== */
+
+  .hero {
+    height: 80vh;
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  /* ======================================
+     CARDS MOBILE
+  ====================================== */
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  /* ======================================
+     BÍBLIA MOBILE
+  ====================================== */
+
+  .biblia-container {
+    margin-top: 100px;
+    padding: 15px;
+  }
+
+  .biblia-scroll {
+    max-height: 350px;
+  }
+
+  /* ======================================
+     BOTÃO TOPO MOBILE
+  ====================================== */
+
+  #btnTop {
+    bottom: 80px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ======================================
+     FOOTER MOBILE
+  ====================================== */
+
+  footer {
+    padding-bottom: 100px; /* espaço por causa do menu inferior */
+  }
+
+}
