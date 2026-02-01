@@ -1,0 +1,153 @@
+/* ==========================================
+   DESKTOP.CSS - EXPERIÊNCIA PREMIUM PARA PC
+   (ATIVA SOMENTE TELAS GRANDES)
+========================================== */
+
+@media (min-width: 1024px) {
+
+  /* ======================================
+     NAVBAR DESKTOP LUXO
+  ====================================== */
+
+  .navbar {
+    padding: 20px 80px;
+    backdrop-filter: blur(10px);
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
+    position: relative;
+  }
+
+  .nav-links li a::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--dourado);
+    transition: 0.4s;
+  }
+
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+
+  /* ======================================
+     HERO DESKTOP CINEMÁTICO
+  ====================================== */
+
+  .hero {
+    height: 100vh;
+    padding: 0 100px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+  }
+
+  /* ======================================
+     GRID PROFISSIONAL
+  ====================================== */
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 100px;
+  }
+
+  .card {
+    padding: 30px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover {
+    transform: rotateY(8deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  }
+
+  /* ======================================
+     BÍBLIA DESKTOP ESTILO LIVRO
+  ====================================== */
+
+  .biblia-container {
+    max-width: 1000px;
+    margin: 120px auto;
+    background: #f5f0e6;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  }
+
+  .biblia-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .biblia-scroll {
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-right: 20px;
+  }
+
+  .versiculo {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  /* ======================================
+     SEÇÃO RÁDIO CATÓLICA
+  ====================================== */
+
+  .radio-section {
+    text-align: center;
+    padding: 80px;
+    background: linear-gradient(135deg, #4b0000, #8b0000);
+    color: white;
+  }
+
+  .radio-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .radio-player {
+    margin-top: 20px;
+    transform: scale(1.2);
+  }
+
+  /* ======================================
+     PAINEL ADMIN (FUTURO)
+  ====================================== */
+
+  .admin-panel {
+    background: #111;
+    color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255,215,0,0.2);
+  }
+
+  .admin-panel h2 {
+    color: var(--dourado);
+    margin-bottom: 20px;
+  }
+
+}
