@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Católicos da Curiosidade</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/desktop.css">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page">
+
+  <!-- Partículas Douradas -->
+  <canvas id="particulasCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="topo">
+    <div class="logo-area">
+      <img src="assets/logo.png" alt="Logo Católicos da Curiosidade" class="logo">
+      <h1>Católicos da Curiosidade</h1>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="curiosidades.html">Curiosidades</a>
+      <a href="coroinhas.html">Coroinhas</a>
+      <a href="biblia.html">Bíblia</a>
+      <a href="oracoes.html">Orações</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <h2>Explorando os Mistérios da Igreja</h2>
+      <p>
+        Descubra curiosidades secretas, aprenda mais sobre a fé católica,
+        mergulhe na Bíblia completa e fortaleça sua espiritualidade.
+      </p>
+      <a href="curiosidades.html" class="btn-dourado">Explorar Agora</a>
+    </div>
+  </section>
+
+  <!-- VERSÍCULO DO DIA -->
+  <section class="versiculo-section slide-up">
+    <div id="versiculoDia"></div>
+  </section>
+
+  <!-- CALENDÁRIO LITÚRGICO -->
+  <section class="calendario-section fade-in">
+    <h2>📅 Calendário Litúrgico</h2>
+    <div id="calendarioLiturgico"></div>
+  </section>
+
+  <!-- RÁDIO CATÓLICA -->
+  <section class="radio-section slide-up">
+    <h2>🎵 Rádio Católica Online</h2>
+    <div class="radio-player">
+      <button onclick="iniciarRadio()">▶ Ouvir Rádio</button>
+      <button onclick="pararRadio()">⏹ Parar</button>
+    </div>
+  </section>
+
+  <!-- BUSCA BÍBLICA -->
+  <section class="busca-section fade-in">
+    <h2>🔎 Buscar na Bíblia</h2>
+    <input type="text" id="campoBusca" placeholder="Digite palavra ou referência...">
+    <button onclick="buscarNaBiblia()">Buscar</button>
+    <div id="resultadoBusca"></div>
+  </section>
+
+  <!-- SISTEMA MULTI IDIOMA -->
+  <section class="idioma-section slide-up">
+    <h2>🌎 Idioma</h2>
+    <select id="seletorIdioma" onchange="trocarIdioma(this.value)">
+      <option value="pt">Português</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
+  </section>
+
+  <!-- PEDIDOS DE ORAÇÃO -->
+  <section class="oracao-section fade-in">
+    <h2>📩 Pedido de Oração</h2>
+    <textarea id="pedidoOracao" placeholder="Escreva seu pedido aqui..."></textarea>
+    <button onclick="enviarPedido()">Enviar Pedido</button>
+  </section>
+
+  <!-- FOOTER PADRÃO -->
+  <footer class="rodape">    
+    <h3>Católicos Da Curiosidade</h3>    
+    <p>    
+      Vamos despertar nosso interesse na igreja católica sabendo as curiosidades secretas que nem todo mundo deve saber, saiba mais...  
+    </p>    
+
+    <div class="contato">      
+      <p><strong>Email:</strong> Catolicos_da_curiosidade@gmail.com</p>    
+    </div>    
+
+    <hr>    
+
+    <p class="copy">© 2026 Católicos Da Curiosidade. Todos os direitos reservados.</p>    
+  </footer>  
+
+  <!-- JS -->
+  <script src="js/app.js"></script>
+  <script src="js/particulas.js"></script>
+  <script src="js/versiculo-dia.js"></script>
+  <script src="js/calendario.js"></script>
+  <script src="js/radio.js"></script>
+  <script src="js/busca.js"></script>
+  <script src="js/oracoes.js"></script>
+  <script src="js/idioma.js"></script>
+
+</body>
+</html>
