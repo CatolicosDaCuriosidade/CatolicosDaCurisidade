@@ -1,1 +1,203 @@
+/* ==========================================
+   CATÓLICOS DA CURIOSIDADE
+   GLOBAL.CSS - BASE ULTRA PREMIUM
+========================================== */
 
+/* RESET PROFISSIONAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* VARIÁVEIS CATÓLICAS */
+:root {
+  --vermelho-igreja: #8B0000;
+  --vermelho-claro: #B22222;
+  --dourado: #d4af37;
+  --dourado-brilho: #f5d76e;
+  --branco: #ffffff;
+  --preto: #111111;
+  --marrom-biblia: #4b2e05;
+  --fundo-pergaminho: #f5f1e3;
+  --cinza-suave: #f4f4f4;
+}
+
+/* DARK MODE BASE */
+body.dark {
+  background: #111;
+  color: #f1f1f1;
+}
+
+/* TIPOGRAFIA */
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: var(--vermelho-igreja);
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: var(--dourado);
+}
+
+/* BOTÕES GLOBAIS */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: var(--vermelho-igreja);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--dourado);
+  color: var(--preto);
+  box-shadow: 0 0 15px var(--dourado-brilho);
+}
+
+/* CONTAINER PADRÃO */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SEÇÕES */
+section {
+  padding: 80px 0;
+}
+
+/* TÍTULO PADRÃO */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--vermelho-igreja);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--dourado);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* CARD GLOBAL */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* DARK MODE CARD */
+body.dark .card {
+  background: #1c1c1c;
+}
+
+/* LOADER GLOBAL */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, var(--vermelho-igreja), #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.loader-cross {
+  font-size: 3rem;
+  animation: pulse 1.5s infinite;
+  color: var(--dourado);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* SCROLLBAR PERSONALIZADA */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vermelho-igreja);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dourado);
+}
+
+/* TRANSIÇÃO GLOBAL SUAVE */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVIDADE BASE */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  p { font-size: 0.9rem; }
+      }
